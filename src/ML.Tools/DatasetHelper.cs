@@ -3,7 +3,7 @@ using Numpy;
 using System.Linq;
 using System.Text;
 
-namespace KerasNet.Regression
+namespace ML.Tools
 {
     public class DatasetHelper
     {
@@ -263,6 +263,42 @@ namespace KerasNet.Regression
             dt.Columns.Remove(ColumnName);
             dt.AcceptChanges();
             return np.array(floats);
+        } 
+        
+        public static string[] ToStringArray(this DataTable dt, string ColumnName)
+        {
+            //var floats = new List<float>();
+            var values = new List<string>();
+            var rowIndex = 0;
+            foreach (DataColumn dc in dt.Columns)
+            {
+                if (ColumnName == dc.ColumnName)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        values.Add (dr[ColumnName].ToString());
+                        rowIndex++;
+                    }
+                }
+            }
+            return values.ToArray();
+        }
+
+        public static string[] ToCategory(this DataTable dt, string ColumnName)
+        {
+            //var floats = new List<float>();
+            var values = new List<string>();
+            var rowIndex = 0;
+            var temp = (from x in dt.AsEnumerable()
+                      select x).ToList();
+            values = temp.AsEnumerable().Select(x=>x.Field<string>(ColumnName)).Distinct().ToList();
+            foreach(DataRow dataRow in dt.Rows)
+            {
+                var index = Array.FindIndex(values.ToArray(), row => row== dataRow[ColumnName].ToString().Trim());
+                dataRow[ColumnName] = index;
+            }
+            dt.AcceptChanges();
+            return values.ToArray();
         }
 
         public static NDarray ToNDArray(this DataTable dt)

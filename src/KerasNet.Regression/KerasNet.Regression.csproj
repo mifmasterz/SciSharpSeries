@@ -12,4 +12,8 @@
     <PackageReference Include="Pandas.NET" Version="0.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ML.Tools\ML.Tools.csproj" />
+  </ItemGroup>
+
 </Project>

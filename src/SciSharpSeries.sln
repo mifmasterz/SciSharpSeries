@@ -5,7 +5,13 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Keras", "Keras", "{33573323-0D97-4B84-B374-1825E7E4474C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KerasNet.Regression", "KerasNet.Regression\KerasNet.Regression.csproj", "{76D4424F-632D-4EF9-957F-31473638A372}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KerasNet.Regression", "KerasNet.Regression\KerasNet.Regression.csproj", "{76D4424F-632D-4EF9-957F-31473638A372}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KerasNet.MultiClassification", "KerasNet.MultiClassification\KerasNet.MultiClassification.csproj", "{1B69692F-B3DB-456D-8C9E-364A7EBDAB63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{25E52468-3943-4348-A8D0-91EF2D36B9A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ML.Tools", "ML.Tools\ML.Tools.csproj", "{0788B329-2491-456C-90C6-9F427F3633FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +23,22 @@ Global
 		{76D4424F-632D-4EF9-957F-31473638A372}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76D4424F-632D-4EF9-957F-31473638A372}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76D4424F-632D-4EF9-957F-31473638A372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B69692F-B3DB-456D-8C9E-364A7EBDAB63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B69692F-B3DB-456D-8C9E-364A7EBDAB63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B69692F-B3DB-456D-8C9E-364A7EBDAB63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B69692F-B3DB-456D-8C9E-364A7EBDAB63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0788B329-2491-456C-90C6-9F427F3633FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0788B329-2491-456C-90C6-9F427F3633FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0788B329-2491-456C-90C6-9F427F3633FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0788B329-2491-456C-90C6-9F427F3633FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{76D4424F-632D-4EF9-957F-31473638A372} = {33573323-0D97-4B84-B374-1825E7E4474C}
+		{1B69692F-B3DB-456D-8C9E-364A7EBDAB63} = {33573323-0D97-4B84-B374-1825E7E4474C}
+		{0788B329-2491-456C-90C6-9F427F3633FB} = {25E52468-3943-4348-A8D0-91EF2D36B9A7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {48457901-19A5-4456-9B5A-1D5E838E056E}

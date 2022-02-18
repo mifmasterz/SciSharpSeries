@@ -3,12 +3,13 @@ using Keras;
 using Keras.Layers;
 using Keras.Models;
 using Numpy;
-using KerasNet.Regression;
 using Keras.Optimizers;
+using ML.Tools;
 
 //tarik data csv
-var datasetPath = @"D:\experiment\SciSharpSeries\Dataset\auto-mpg.csv";
-var data = KerasNet.Regression.DatasetHelper.LoadAsDataTable(datasetPath);
+var datasetPath = $"{FileHelpers.AppDirectory}\\..\\..\\..\\..\\Dataset\\auto-mpg.csv";
+
+var data = DatasetHelper.LoadAsDataTable(datasetPath);
 //hapus kolom
 data.Drop(new[] { "car name" });
 //one hot encoding
