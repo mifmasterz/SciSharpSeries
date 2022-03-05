@@ -52,7 +52,7 @@ namespace ML.Tools
             return dataTable;
         }
     }
-    public static class DatatableExtensions
+    public static partial class DatatableExtensions
     {
         public static void Drop(this DataTable dt, string[] ColumnNames)
         {
