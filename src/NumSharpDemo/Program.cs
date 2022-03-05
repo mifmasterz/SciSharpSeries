@@ -63,7 +63,7 @@ f = d.dot(e);
 f?.Print("perkalian matrix d . e");
 
 
-//min, max, sum
+//min, max
 g = rnd.rand((3,3));
 g?.Print("g");
 g.min().Print("min");
